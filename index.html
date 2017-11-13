@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+        }
+
+        *{margin: 0;padding: 0;}
+
+        .box1{
+            width: 200px;height: 200px;
+            background: #eee;
+            margin-top: 10px;
+
+            /*定位居中*/
+            position: relative;
+
+        }
+        .box2{
+            width: 200px;height: 200px;
+            background: #eee;
+            margin-top: 10px;
+
+            /*margin居中*/
+            position: relative;
+        }
+        .box3{
+            width: 200px;height: 200px;
+            background: #eee;
+            margin-top: 10px;
+
+            /*inline居中*/
+            text-align: center;
+
+        }
+        /*定位+transform居中*/
+        .box1 div{border: 1px solid #000;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%)}
+
+        /*margin居中*/
+        .box2 div{border: 1px solid #000;position: absolute;left: 0;top: 0;bottom: 0;right: 0;margin:auto;width: 100px;height: 50px}
+
+        /*inline居中*/
+        .box3 div{border: 1px solid #000;display: inline-block;vertical-align: middle;}
+        .box3:before{content: '';  display: inline-block;  height: 100%;  vertical-align: middle;}
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div>我想居中</div>
+</div>
+<div class="box2">
+    <div>我想居中</div>
+</div>
+<div class="box3">
+    <div>我想居中</div>
+</div>
+</body>
+</html>
